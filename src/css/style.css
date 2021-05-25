@@ -1,12 +1,13 @@
 body {
+  font-family: 'Pattaya', sans-serif;
   text-align: center;
-  background: #233435;
+  background: #6d9a9c;
   font-family: sans-serif;
   font-weight: 100;
 }
 
 .countdown-title {
-  color: rgb(98, 175, 158);
+  color: rgb(163, 8, 184);
   font-weight: 100;
   font-size: 40px;
   margin: 40px 0px 20px;
@@ -39,4 +40,8 @@ body {
   display: block;
   padding-top: 5px;
   font-size: 16px;
+}
+
+.time {
+  background-image: url(https://www.paris-disney.com/wp-content/uploads/elementor/thumbs/VIP-Disnet-Tour-miki-nochnoe-shou-na-3-dnya-dlp-o79ik8f55n4iwld5d0oqjwqius30ifbh3kw3culevc.jpg);
 }

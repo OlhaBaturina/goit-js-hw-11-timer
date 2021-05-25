@@ -5,6 +5,7 @@ const hoursRef = document.querySelector('[data-value="hours"]');
 const minsRef = document.querySelector('[data-value="mins"]');
 const secsRef = document.querySelector('[data-value="secs"]');
 const titleRef = document.querySelector('.countdown-title');
+const bodyRef = document.querySelector('body');
 
 class CountdownTimer {
   constructor({ selector, targetDate }) {
@@ -18,13 +19,14 @@ class CountdownTimer {
 
     this.updateClockface(time);
     this.stop(time);
-    console.log(`${days}:${hours}:${mins}:${secs}`);
+    // console.log(`${days}:${hours}:${mins}:${secs}`);
   }, 1000);
 
   stop(time) {
     if (time <= 0) {
       clearInterval(this.start);
-      titleRef.textContent = 'Time is over!';
+      titleRef.textContent = 'Happy Birthday, my Baby!';
+      bodyRef.add.classlist = '.time';
     }
   }
 
@@ -51,5 +53,5 @@ class CountdownTimer {
 
 new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date('Jan 01, 2022'),
+  targetDate: new Date('10 30, 2021'),
 });
