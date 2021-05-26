@@ -11,16 +11,23 @@ class CountdownTimer {
   constructor({ selector, targetDate }) {
     this.selector = selector;
     this.targetDate = targetDate;
+    this.init();
   }
-  start = setInterval(() => {
+
+  init() {
+    this.startTimer();
+    this.start = setInterval(() => {
+      this.startTimer();
+    }, 1000);
+  }
+
+  startTimer() {
     const currentTime = Date.now();
     const deltaTime = this.targetDate - currentTime;
     const time = this.getTimeComponents(deltaTime);
-
     this.updateClockface(time);
     this.stop(time);
-    // console.log(`${days}:${hours}:${mins}:${secs}`);
-  }, 1000);
+  }
 
   stop(time) {
     if (time <= 0) {
